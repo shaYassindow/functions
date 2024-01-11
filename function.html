@@ -1,0 +1,33 @@
+<h1 id="counter"></h1>
+<button id="incbtn">click me Daddy</button>
+<br /><br />
+<button id="decbtn">click me Mommy</button>
+
+<script>
+  let countHolder = document.querySelector("#counter");
+
+  let count = 0;
+
+  countHolder.textContent = count;
+
+  function increment() {
+    count += 5;
+    countHolder.textContent = count;
+    incbtn.textContent = `Clicks ${count}` ;
+  }
+
+  let incbtn = document.querySelector("#incbtn");
+
+  incbtn.textContent = `Clicks ${count}`;
+
+  incbtn.onclick = increment;
+
+  //2
+  let decbtn = document.querySelector("#decbtn");
+
+  function decrement() {
+    count -= 5;
+    countHolder.textContent = count;
+  }
+  decbtn.onclick = decrement;
+</script>
